@@ -1,0 +1,22 @@
+.canvas{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.inputSearch{
+    height: 48px;
+    width: 45%;
+    background-color: #D9D9D8;
+    color: #FFFFFF;
+    margin: 0 auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid gray;
+}
+
+.inputSearch::placeholder{
+    color: #FFFFFF;
+}
+

@@ -1,0 +1,14 @@
+.container-btn{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    width: 15%;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    padding: 15px;
+    text-align: center;
+    margin: auto;
+}

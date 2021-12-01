@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
+import "./TodoItem.css";
 
 function TodoItem(props) {
-    return(
-        <li>
-            <span>C</span>
-            <p>{props.text}</p>
-            <span>X</span>
-        </li>
-    )
+  return (
+      <div className="TodoItem">
+        <input type="checkbox" id={props.text} value={props.text} />{" "}
+        <label htmlFor={props.text}> {props.text} </label>
+        <button className="btn-cancel" type="button"> X </button>
+      </div>
+  );
 }
 
-
-export {TodoItem};
+export { TodoItem };
