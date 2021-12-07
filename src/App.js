@@ -9,7 +9,7 @@ import { Layout } from "./Layout";
 // import "./App.css";
 
 const todos = [
-  { text: "Comprar cebolla", completed: true },
+  { text: "Comprar cebolla", completed: false },
   { text: "Curso Intro a React", completed: false },
   { text: "Llorar con la llorona", completed: false },
 ];
@@ -18,7 +18,7 @@ function App() {
   const [task, setTask] = React.useState(todos);
   const [search, setSearch] = React.useState('');
 
-  let completed = task.filter(index => task.completed == true).length;
+  let completed = task.filter(index => index.completed === true);
 
   let listTodos = [];
 
@@ -35,13 +35,13 @@ function App() {
   return (
     <React.Fragment>
       <Layout>
-        <TodoCounter completed={completed} total={task.length} />
+        <TodoCounter completed={completed.length} total={task.length} />
 
         <TodoSearch param={search} setParam={setSearch} />
 
         <TodoList>
           { listTodos.length >= 1 ? listTodos.map((todo) => (
-            <TodoItem key={todo.text} text={todo.text} />
+            <TodoItem key={todo.text} text={todo.text} status={task} setStatus={setTask} />
           )): "No existe esta tarea"}
         </TodoList>
 
