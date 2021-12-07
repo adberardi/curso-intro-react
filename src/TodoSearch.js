@@ -1,12 +1,12 @@
 import React from "react";
 import "./TodoSearch.css";
 
-function TodoSearch() {
-  const [param, setParam] = React.useState("");
+function TodoSearch({param,setParam}) {
 
   const onSearchValueHandler = (event) => {
-    setParam(event.target.value);
-    console.log(event.target.value);
+    const p = event.target.value;
+    setParam(p.toLowerCase());
+    console.log(param);
   };
 
   return (
@@ -20,7 +20,6 @@ function TodoSearch() {
           onChange={onSearchValueHandler}
         />
       </div>
-      <p> {param} </p>
     </React.Fragment>
   );
 }

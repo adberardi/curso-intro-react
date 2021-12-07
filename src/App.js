@@ -9,23 +9,40 @@ import { Layout } from "./Layout";
 // import "./App.css";
 
 const todos = [
-  { text: "Comprar cebolla", completed: false },
+  { text: "Comprar cebolla", completed: true },
   { text: "Curso Intro a React", completed: false },
   { text: "Llorar con la llorona", completed: false },
 ];
 
 function App() {
+  const [task, setTask] = React.useState(todos);
+  const [search, setSearch] = React.useState('');
+
+  let completed = task.filter(index => task.completed == true).length;
+
+  let listTodos = [];
+
+  if (search.length >= 1) {
+    listTodos = task.filter(index => {
+      const txt = index.text;
+      const txtLower = txt.toLowerCase();
+      return txtLower.includes(search);
+    })
+  } else {
+    listTodos = task;
+  }
+
   return (
     <React.Fragment>
       <Layout>
-        <TodoCounter />
+        <TodoCounter completed={completed} total={task.length} />
 
-        <TodoSearch />
+        <TodoSearch param={search} setParam={setSearch} />
 
         <TodoList>
-          {todos.map((todo) => (
+          { listTodos.length >= 1 ? listTodos.map((todo) => (
             <TodoItem key={todo.text} text={todo.text} />
-          ))}
+          )): "No existe esta tarea"}
         </TodoList>
 
         <CreateTodoButton />
