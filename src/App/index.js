@@ -1,10 +1,6 @@
 //import logo from './logo.svg';
 import React from "react";
-import { TodoCounter } from "../TodoCounter";
-import { TodoSearch } from "../TodoSearch";
-import { TodoList } from "../TodoList";
-import { TodoItem } from "../TodoItem";
-import { CreateTodoButton } from "../CreateTodoButton";
+import { AppUI } from "./AppUI";
 import { Layout } from "../Layout";
 // import "./App.css";
 
@@ -32,40 +28,21 @@ function App() {
     listTodos = task;
   }
 
-  /* Si una funcion requiere de un parametro que se emplea en el Html, es necesario usar la arrow function */
-  const onComplete = (txt) => {
-    let listAux = task;
-    listAux = listAux.filter((index) => {
-      if (index.text === txt) {
-        index.completed = !index.completed;
-      }
-      return index;
-    });
-    setTask(listAux);
-  };
+
 
   return (
     <React.Fragment>
       <Layout>
-        <TodoCounter completed={completed.length} total={task.length} />
-
-        <TodoSearch param={search} setParam={setSearch} />
-
-        <TodoList>
-          {listTodos.length >= 1
-            ? listTodos.map((todo) => (
-                <TodoItem
-                  key={todo.text}
-                  text={todo.text}
-                  status={task}
-                  setStatus={setTask}
-                  completeTodo={() => onComplete(todo.text)}
-                />
-              ))
-            : "No existe esta tarea"}
-        </TodoList>
-
-        <CreateTodoButton />
+        <AppUI
+          completed={completed.length}
+          total={task.length}
+          param={search}
+          setParam={setSearch}
+          status={task}
+          setStatus={setTask}
+          listTodos={listTodos}
+        />
+        
       </Layout>
     </React.Fragment>
   );

@@ -3,11 +3,6 @@ import "./TodoItem.css";
 
 function TodoItem(props) {
 
-  /* Si una funcion no requiere de algun parametro, basta con emplear solo el objeto dentro del evento */
-  const onDelete = () => {
-    console.log(`Borrando tarea`);
-  };
-
   return (
     <div className="TodoItem">
       <input
@@ -17,7 +12,11 @@ function TodoItem(props) {
         onClick={() => props.completeTodo(props.text)}
       />{" "}
       <label htmlFor={props.text}> {props.text} </label>
-      <button className="btn-cancel" type="button" onClick={onDelete}>
+      <button
+        className="btn-cancel"
+        type="button"
+        onClick={() => props.deleteTodo(props.text)}
+      >
         {" "}
         X{" "}
       </button>
