@@ -4,11 +4,12 @@
 }
 
 .btn{
-    width: 15%;
+    width: 5%;
+    height: 45px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     background-color: #4CAF50;
-    padding: 15px;
+    /* padding: 15px; */
     text-align: center;
     margin: auto;
 }
