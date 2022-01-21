@@ -16,7 +16,7 @@ function TodoProvider(props) {
     
       let completed = todos.filter((index) => index.completed === true);
       let numCompleted = completed.length;
-      let sizeTodos = todos.length;
+      let total = todos.length;
     
       let listTodos = [];
     
@@ -55,7 +55,7 @@ function TodoProvider(props) {
             error,
             loading,
             numCompleted,
-            sizeTodos,
+            total,
             search,
             setSearch,
             todos,

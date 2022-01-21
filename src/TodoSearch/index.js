@@ -1,12 +1,14 @@
 import React from "react";
+import { TodoContext } from "../TodoContext";
 import "./TodoSearch.css";
 
-function TodoSearch({param,setParam}) {
+function TodoSearch() {
+  const {search, setSearch} = React.useContext(TodoContext);
 
   const onSearchValueHandler = (event) => {
     const p = event.target.value;
-    setParam(p.toLowerCase());
-    console.log(param);
+    setSearch(p.toLowerCase());
+    console.log(search);
   };
 
   return (
@@ -15,7 +17,7 @@ function TodoSearch({param,setParam}) {
         <input
           type="text"
           className="inputSearch"
-          value={param}
+          value={search}
           placeholder="Indique parametro..."
           onChange={onSearchValueHandler}
         />
