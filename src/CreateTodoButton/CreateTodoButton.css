@@ -1,5 +1,6 @@
 .container-btn{
     display: flex;
+    justify-content: end;
     align-items: center;
 }
 
@@ -11,5 +12,6 @@
     background-color: #4CAF50;
     /* padding: 15px; */
     text-align: center;
-    margin: auto;
+    margin: rigth;
+    z-index: 1;
 }

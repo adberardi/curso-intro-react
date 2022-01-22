@@ -49,7 +49,7 @@ function AppUI() {
         </Modal>
       )}
 
-      <CreateTodoButton setOpenModal={setOpenModal} />
+      <CreateTodoButton modal={modal} setOpenModal={setOpenModal} />
     </React.Fragment>
   );
 }
