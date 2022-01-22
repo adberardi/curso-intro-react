@@ -4,6 +4,7 @@ import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
+import { TodoForm } from "../TodoForm";
 import { Modal } from "../Modal";
 import { CreateTodoButton } from "../CreateTodoButton";
 
@@ -45,11 +46,11 @@ function AppUI() {
 
       {modal && (
         <Modal>
-          <p>Probando los modales</p>
+          <TodoForm />
         </Modal>
       )}
 
-      <CreateTodoButton modal={modal} setOpenModal={setOpenModal} />
+      <CreateTodoButton setOpenModal={setOpenModal} />
     </React.Fragment>
   );
 }

@@ -8,7 +8,7 @@ function TodoSearch() {
   const onSearchValueHandler = (event) => {
     const p = event.target.value;
     setSearch(p.toLowerCase());
-    console.log(search);
+    // console.log(search);
   };
 
   return (

@@ -30,6 +30,13 @@ function TodoProvider(props) {
       } else {
         listTodos = todos;
       }
+
+      const onAdd = (newTodo) => {
+        console.log(`onAdd ${newTodo}`);
+        let newArr = [...todos];
+        newArr.push({completed: false, text: newTodo});
+        saveTodos(newArr);
+      }
     
       /* Si una funcion requiere de un parametro que se emplea en el Html, es necesario usar la arrow function */
       const onCompleteTask = (txt) => {
@@ -65,7 +72,8 @@ function TodoProvider(props) {
             onCompleteTask,
             onDeleteTask,
             modal,
-            setOpenModal
+            setOpenModal,
+            onAdd
         }}>
             { props.children }
         </TodoContext.Provider>

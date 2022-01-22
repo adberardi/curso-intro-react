@@ -30,12 +30,17 @@ function useLocalStorage(itemName, initialValue) {
       }, 1000);
     }, []);
   
-    const saveTodos = (newArr) => {
-      localStorage.setItem(itemName, JSON.stringify(newArr));
-      setItem(newArr);
+    const saveItem = (newArr) => {
+      try {
+        localStorage.setItem(itemName, JSON.stringify(newArr));
+        setItem(newArr);
+      } catch (error) {
+        setError(true);
+      }
+
     };
   
-    return { item, saveTodos, loading, error };
+    return { item, saveItem, loading, error };
   }
 
 
