@@ -1,0 +1,7 @@
+.TodoItem{
+    margin: 10px;
+    height: 48px;
+    border-radius: 5px;
+    font-family: 'Oxygen', sans-serif;
+    box-shadow: 1px 1px 5px grey;
+}
