@@ -3,7 +3,7 @@ import React from "react";
 // Custom Hooks
 function useLocalStorage(itemName, initialValue) {
     const [error, setError] = React.useState();
-    const [loading, setLoading] = React.useState();
+    const [loading, setLoading] = React.useState(true);
     const [item, setItem] = React.useState(initialValue);
   
    // Uso de useEffect()
@@ -27,7 +27,7 @@ function useLocalStorage(itemName, initialValue) {
         } catch (error) {
           setError(true);
         }
-      }, 1000);
+      }, 4000);
     }, []);
   
     const saveItem = (newArr) => {

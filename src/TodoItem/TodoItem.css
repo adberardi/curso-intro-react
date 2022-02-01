@@ -1,5 +1,6 @@
 .TodoItem{
     margin: 10px;
+    width: 50%;
     height: 48px;
     border-radius: 5px;
     font-family: 'Oxygen', sans-serif;

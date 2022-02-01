@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const Skeleton = () => (
+const Loading = () => (
   <div className="TodoItem">
     <ContentLoader
       speed={2}
@@ -11,9 +11,10 @@ const Skeleton = () => (
       backgroundColor="#f3f3f3"
       foregroundColor="#ecebeb"
     >
-            <rect x="48" y="20" rx="3" ry="3" width="88" height="6" /> 
+      <rect x="10" y="12" width="12" height="12" />
+      <rect x="25" y="15" rx="5" ry="5" width="220" height="10" />
     </ContentLoader>
   </div>
 );
 
-export { Skeleton };
+export { Loading };

@@ -1,21 +1,28 @@
-.container-form{
-    display: flex;
-    justify-content: space-between;
+.container-form {
+  display: flex;
+  justify-content: space-between;
 }
 
 .btnAdd {
-    height: 2rem;
-    background: green;
-    color: seashell;
-    border: none;
-    border-radius: 5px;
+  height: 2rem;
+  background: green;
+  color: seashell;
+  border: none;
+  border-radius: 5px;
 }
 
 .btnCancel {
-    height: 2rem;
-    background: honeydew;
-    border:  1px solid red;
-    outline-color: red;
-    color: red;
-    border-radius: 5px;
+  height: 2rem;
+  background: honeydew;
+  border: 1px solid red;
+  outline-color: red;
+  color: red;
+  border-radius: 5px;
+}
+
+.textArea {
+  resize: none;
+  width: 400px;
+  height: 100px;
+  border: 2px solid #78eebd;
 }

@@ -1,17 +1,17 @@
 .container-btn{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 
 .btn{
-    width: 5%;
+    /* width: 5%; */
     height: 45px;
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
     background-color: #4CAF50;
-    /* padding: 15px; */
     text-align: center;
-    margin: rigth;
+    margin: 10rem;
     z-index: 1;
+    color: honeydew;
 }

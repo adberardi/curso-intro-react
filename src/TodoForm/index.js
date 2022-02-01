@@ -29,6 +29,7 @@ function TodoForm() {
       <textarea
         value={newValue}
         onChange={handleChange}
+        className="textArea"
         placeholder="Escriba la tarea a pendiente a realizar"
       />
       <div className="container-form">

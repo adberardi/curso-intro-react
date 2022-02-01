@@ -9,7 +9,7 @@ function CreateTodoButton(props) {
   return (
     <div className="container-btn">
       <button className="btn" type="button" onClick={() => onClickButton()}>
-        +
+        Agregar nueva tarea
       </button>
     </div>
   );
