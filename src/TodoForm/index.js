@@ -1,5 +1,6 @@
 import React from "react";
 import { TodoContext } from "../TodoContext";
+import "./TodoForm.css";
 
 function TodoForm() {
   const [newValue, setNewValue] = React.useState("");
@@ -30,12 +31,12 @@ function TodoForm() {
         onChange={handleChange}
         placeholder="Escriba la tarea a pendiente a realizar"
       />
-      <div>
-        <button type="submit">
+      <div className="container-form">
+        <button type="submit" className="btnAdd">
           {" "}
           Agregar{" "}
         </button>
-        <button type="button" onClick={onCancel}>
+        <button type="button" className="btnCancel" onClick={onCancel}>
           {" "}
           Cancelar{" "}
         </button>

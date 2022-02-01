@@ -1,0 +1,21 @@
+.container-form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnAdd {
+    height: 2rem;
+    background: green;
+    color: seashell;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnCancel {
+    height: 2rem;
+    background: honeydew;
+    border:  1px solid red;
+    outline-color: red;
+    color: red;
+    border-radius: 5px;
+}
