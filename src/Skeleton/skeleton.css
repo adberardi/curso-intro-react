@@ -1,7 +1,49 @@
-.TodoItem{
-    margin: 10px;
-    height: 48px;
-    border-radius: 5px;
-    font-family: 'Oxygen', sans-serif;
-    box-shadow: 1px 1px 5px grey;
+.loading-container {
+  margin: 10px;
+  width: 50%;
+  height: 48px;
+  border-radius: 5px;
+  font-family: "Oxygen", sans-serif;
+  box-shadow: 1px 1px 5px grey;
+}
+
+.loading-checkbox {
+  position: absolute;
+  left: 12px;
+}
+
+.loading-text {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.loading-btn {
+  background-color: #fe0100;
+  border-radius: 5px;
+  border: none;
+}
+
+.loading-container,
+.loading-checkbox,
+.loading-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(250, 250, 250, 1),
+    rgb(200, 199, 199)
+  );
+  background-size: 400% 400%;
+  animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
