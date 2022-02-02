@@ -1,6 +1,7 @@
 import React from "react";
 import { TodoContext } from "../TodoContext";
 import "./TodoForm.css";
+import imageAdd from "../assets/agregartarea.png";
 
 function TodoForm() {
   const [newValue, setNewValue] = React.useState("");
@@ -25,7 +26,10 @@ function TodoForm() {
 
   return (
     <form onSubmit={onSubmit}>
-      {/* <label>Formulario</label> */}
+      {/* <a href="https://www.flaticon.es/iconos-gratis/anadir" title="añadir iconos">Añadir iconos creados por Freepik - Flaticon</a> */}
+      <figure className="container-image">
+        <img className="image" src={imageAdd} alt="Agregar Tarea" />
+      </figure>
       <textarea
         value={newValue}
         onChange={handleChange}

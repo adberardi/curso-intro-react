@@ -8,7 +8,6 @@ function TodoSearch() {
   const onSearchValueHandler = (event) => {
     const p = event.target.value;
     setSearch(p.toLowerCase());
-    // console.log(search);
   };
 
   return (
@@ -18,7 +17,7 @@ function TodoSearch() {
           type="text"
           className="inputSearch"
           value={search}
-          placeholder="Indique parametro..."
+          placeholder="Indique tarea a buscar"
           onChange={onSearchValueHandler}
         />
       </div>

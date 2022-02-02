@@ -8,15 +8,17 @@
     height: 48px;
     width: 45%;
     background-color: #D9D9D8;
-    color: #FFFFFF;
+    color: #757171;
     margin: 0 auto;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 1px solid gray;
+    text-align: center;
 }
 
 .inputSearch::placeholder{
-    color: #FFFFFF;
+    color: #757171;
+    text-align: center;
 }
 
