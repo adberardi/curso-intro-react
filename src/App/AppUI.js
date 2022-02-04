@@ -35,12 +35,13 @@ function AppUI() {
         {loading && <Loading/>}
         {(!loading && !listTodos.length) && <TodoEmpty />}
 
-        {listTodos.map((todo) => (
+        {todos.map((todo) => (
           <TodoItem
             key={todo.text}
             text={todo.text}
             status={todos}
             setStatus={saveTodos}
+            complete={todo.completed}
             completeTodo={() => onCompleteTask(todo.text)}
             deleteTodo={() => onDeleteTask(todo.text)}
           />

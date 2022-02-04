@@ -1,4 +1,7 @@
 .TodoItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
     width: 50%;
     height: 48px;
@@ -7,8 +10,26 @@
     box-shadow: 1px 1px 5px grey;
 }
 
+.TodoItem-selected{
+    background: grey;
+}
+
 .btn-cancel {
-    background-color: #FE0100;
-    border-radius: 5px;
+    background-color: transparent;
     border: none;
+    padding: 0;
+    /* margin: auto; */
+}
+
+.field-checkbox {
+    margin: 20px;
+}
+
+.text{
+    margin: auto;
+    text-align: center;
+}
+
+.text-line{
+    text-decoration: line-through;
 }
