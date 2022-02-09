@@ -1,20 +1,15 @@
 import React from "react";
-import { TodoIcon } from "../TodoIcon";
+import { CompleteIcon } from "../TodoIcon/CompleteIcon";
+import { DeleteIcon } from "../TodoIcon/DeleteIcon";
 import "./TodoItem.css";
 
 function TodoItem(props) {
   return (
     <div className={`TodoItem ${props.complete && "TodoItem-selected"}`}>
-      <div className="field-checkbox">
-        <input
-          type="checkbox"
-          id={props.text}
-          value={props.text}
-          checked={props.complete}
-          onChange={() => props.completeTodo(props.text)}
-        />
-      </div>
-      {props.complete && <TodoIcon type="complete" />}
+      <CompleteIcon
+        completed={props.complete}
+        onComplete={props.completeTodo}
+      />
 
       <label
         className={`text ${props.complete && "text-line"}`}
@@ -23,13 +18,7 @@ function TodoItem(props) {
         {" "}
         {props.text}{" "}
       </label>
-      <button
-        className="btn-cancel"
-        type="button"
-        onClick={() => props.deleteTodo(props.text)}
-      >
-        <TodoIcon type="delete" />
-      </button>
+      <DeleteIcon completed={props.complete} onDelete={props.deleteTodo} />
     </div>
   );
 }

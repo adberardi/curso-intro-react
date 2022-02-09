@@ -1,19 +1,21 @@
 import React from "react";
-import CheckImg from "../assets/check.png";
-import DeleteImg from "../assets/delete.png";
+import { ReactComponent as CheckSVG } from "../assets/checkbox-marked.svg";
+import { ReactComponent as DeleteSVG } from "../assets/trash-can.svg";
 import "./TodoIcon.css";
 
-function TodoIcon(param) {
+function TodoIcon({ type, color="gray", onclick }) {
+  const iconTypes = {
+    check: color => <CheckSVG className={"Icon-svg Icon-svg--check"} fill={color} />,
+    delete: color => <DeleteSVG className={"Icon-svg Icon-svg--delete"} fill={color}/>,
+  };
+
   return (
-    <div>
-      <figure>
-        {param.type === "delete" ? (
-          <img src={DeleteImg} className="icon-dimen" />
-        ) : (
-          <img src={CheckImg} className="icon-dimen" />
-        )}
-      </figure>
-    </div>
+    <span
+      className={`Icon-container Icon-container--${type}`}
+      onClick={onclick}
+    >
+      {iconTypes[type](color)}
+    </span>
   );
 }
 

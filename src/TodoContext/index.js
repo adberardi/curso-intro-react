@@ -43,7 +43,6 @@ function TodoProvider(props) {
     listAux = listAux.filter((index) => {
       if (index.text === txt) {
         index.completed = !index.completed;
-        // console.log(`Listo ${index.text}`);
       }
       return index;
     });

@@ -1,3 +1,31 @@
-.icon-dimen{
-    height: 20px;
+.Icon-container{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+}
+
+
+.Icon-container--check{
+    left: 12px;
+}
+
+.Icon-container--delete{
+    right: 0;
+}
+
+.Icon-container:hover .Icon-container--check{
+    fill: #4caf50;
+}
+
+.Icon-container:hover .Icon-container--delete{
+    fill: red;
+}
+
+.Icon-svg{
+    width: 24px;
+    height: 24px;
+    transition: fill .15s;
 }
