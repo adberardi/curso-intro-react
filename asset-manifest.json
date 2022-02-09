@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/curso-intro-react/static/css/main.12186a3d.chunk.css",
+    "main.js": "/curso-intro-react/static/js/main.e88cbf81.chunk.js",
+    "main.js.map": "/curso-intro-react/static/js/main.e88cbf81.chunk.js.map",
+    "runtime-main.js": "/curso-intro-react/static/js/runtime-main.f5c87c39.js",
+    "runtime-main.js.map": "/curso-intro-react/static/js/runtime-main.f5c87c39.js.map",
+    "static/js/2.0fd382e2.chunk.js": "/curso-intro-react/static/js/2.0fd382e2.chunk.js",
+    "static/js/2.0fd382e2.chunk.js.map": "/curso-intro-react/static/js/2.0fd382e2.chunk.js.map",
+    "index.html": "/curso-intro-react/index.html",
+    "static/css/main.12186a3d.chunk.css.map": "/curso-intro-react/static/css/main.12186a3d.chunk.css.map",
+    "static/js/2.0fd382e2.chunk.js.LICENSE.txt": "/curso-intro-react/static/js/2.0fd382e2.chunk.js.LICENSE.txt",
+    "static/media/Empty-amico.0a3bcb40.svg": "/curso-intro-react/static/media/Empty-amico.0a3bcb40.svg",
+    "static/media/agregartarea.3e733436.png": "/curso-intro-react/static/media/agregartarea.3e733436.png",
+    "static/media/checkbox-marked.5179a132.svg": "/curso-intro-react/static/media/checkbox-marked.5179a132.svg",
+    "static/media/error-image.011851af.svg": "/curso-intro-react/static/media/error-image.011851af.svg",
+    "static/media/trash-can.89736e0d.svg": "/curso-intro-react/static/media/trash-can.89736e0d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5c87c39.js",
+    "static/js/2.0fd382e2.chunk.js",
+    "static/css/main.12186a3d.chunk.css",
+    "static/js/main.e88cbf81.chunk.js"
+  ]
+}
