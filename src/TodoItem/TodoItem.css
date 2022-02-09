@@ -11,7 +11,7 @@
 }
 
 .TodoItem-selected{
-    background: grey;
+    background: rgb(180, 172, 172);
 }
 
 .btn-cancel {
