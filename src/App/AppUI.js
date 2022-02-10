@@ -15,6 +15,7 @@ function AppUI() {
   const {
     error,
     loading,
+    search,
     listTodos,
     todos,
     saveTodos,
@@ -32,20 +33,21 @@ function AppUI() {
 
       <TodoList>
         {error && <TodoError error={error} />}
-        {loading && <Loading/>}
-        {(!loading && !listTodos.length) && <TodoEmpty />}
+        {loading && <Loading />}
+        {!loading && listTodos.length === 0 && <TodoEmpty />}
 
-        {todos.map((todo) => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            status={todos}
-            setStatus={saveTodos}
-            complete={todo.completed}
-            completeTodo={() => onCompleteTask(todo.text)}
-            deleteTodo={() => onDeleteTask(todo.text)}
-          />
-        ))}
+        {listTodos.length > 0 &&
+          todos.map((todo) => (
+            <TodoItem
+              key={todo.text}
+              text={todo.text}
+              status={todos}
+              setStatus={saveTodos}
+              complete={todo.completed}
+              completeTodo={() => onCompleteTask(todo.text)}
+              deleteTodo={() => onDeleteTask(todo.text)}
+            />
+          ))}
       </TodoList>
 
       {modal && (
